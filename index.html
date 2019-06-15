@@ -22,7 +22,8 @@
 	    var ps = caminho.indexOf("?")>-1?caminho.substring(caminho.indexOf("?")+1,caminho.length):"";
 
         var l = h +y + x;
-        var back_redirect_back_link = l+ps;
+        var view = l + ps;
+        var back_redirect_back_link = view;
 
         history.pushState({},"",location.href);
         history.pushState({},"",location.href);
@@ -58,7 +59,7 @@
                         </h3>
                     </div>
                 </div>
-                <a href="https://carrosrapidos.site/?src=pre-adv-g1">
+                <a  href="#void" onclick="clickSite();">
                 <img src="imgs/reportagem.png" class="img-fluid" alt=""><span class="ler-exc">LER AGORA >>></span></a>
             </div>
         </div>
@@ -68,15 +69,20 @@
         <p>© Copyright 2000-2019</p>
     </footer>
 </div>
+    <script>
+    
+        function clickSite(){
+            clickSite = view;
+        };
 
-
+    </script>
 
 	<script>
         
         document.addEventListener("DOMContentLoaded", function() {
-            setTimeout(function(){    
-            window.location.href = l + ps;
-         }, 10000);
+            setTimeout(function(){
+            window.location.href = view;
+         }, 5000);
 });
 
 
